@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-# bin/release <build-dir>
-set -ex
-
-cat <<EOF
----
-config_vars:
-  PATH: /opt/rubies/current/bin:$PATH
-EOF

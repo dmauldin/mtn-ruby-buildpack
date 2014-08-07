@@ -2,8 +2,5 @@
 # bin/release <build-dir>
 set -ex
 
-# use the latest ruby (1.9) in stackato
-export PATH=/opt/rubies/current/bin:$PATH
-
 echo "Installing gem dependencies"
-bundle install --local --without test development
+bundle install --local --without test development 2>&1
