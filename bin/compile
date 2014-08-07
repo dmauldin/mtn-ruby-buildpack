@@ -2,11 +2,5 @@
 # bin/release <build-dir>
 set -ex
 
-# Syntax sugar.
-indent() {
-  RE="s/^/       /"
-  [ $(uname) == "Darwin" ] && sed -l "$RE" || sed -u "$RE"
-}
-
 echo "Installing gem dependencies"
-bundle exec bundle install --local --without test development 2>&1 | indent
+bundle exec bundle install --local --without test development 2>&1
