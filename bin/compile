@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# bin/use <build-dir>
-
-set -e
+# bin/release <build-dir>
+set -ex
 
 # Syntax sugar.
 indent() {
@@ -9,5 +8,5 @@ indent() {
   [ $(uname) == "Darwin" ] && sed -l "$RE" || sed -u "$RE"
 }
 
-puts-step "Installing gem dependencies"
+echo "Installing gem dependencies"
 bundle exec bundle install --local --without test development 2>&1 | indent
