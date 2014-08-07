@@ -2,5 +2,7 @@
 # bin/release <build-dir>
 set -ex
 
+cd $1
+
 echo "Installing gem dependencies"
 bundle install --local --without test development 2>&1
