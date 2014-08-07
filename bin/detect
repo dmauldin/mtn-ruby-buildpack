@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # bin/use <build-dir>
+set -ex
 
 # TODO: Add check for buildpack support here
 echo "Ruby"
