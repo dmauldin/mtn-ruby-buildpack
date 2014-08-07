@@ -3,4 +3,4 @@
 set -ex
 
 echo "Installing gem dependencies"
-bundle install --local --without test development 2>&1
+bundle install --local --without test development
