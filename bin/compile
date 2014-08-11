@@ -12,4 +12,5 @@ cd $1
 echo "Installing gem dependencies"
 unset RUBYOPT BUNDLE_BIN_PATH GEM_PATH GEM_HOME BUNDLE_GEMFILE
 # which bundler
-bundle install --local --without test:development 2>&1
+bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin --deployment
+# bundle install --local --without test:development 2>&1
