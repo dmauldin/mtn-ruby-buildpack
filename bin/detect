@@ -1,6 +1,12 @@
-#!/usr/bin/env bash
-# bin/use <build-dir>
+#!/bin/sh
 
-# TODO: Add check for buildpack support here
-echo "Ruby"
-exit 0
+BUILD_DIR="$1"
+
+cd "$BUILD_DIR"
+
+if [ -e Gemfile ]; then
+    echo "Ruby"
+else
+    echo no
+    exit 1
+fi
