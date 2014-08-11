@@ -1,18 +1,12 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-[ -n "${SCRIPT_DEBUG}" ] && PS4='${0##*/}:$(printf "%03d" $LINENO) $(date +%Y-%m-%dT%H:%M:%S%z)> ' && set -x
-
 cd $(dirname $0)
 
 cat <<EOF
 ---
 config_vars:
   PATH: /opt/rubies/current/bin:$PATH
-EOF
-
-
-cat <<EOF
 
 default_process_types:
   web: bundle exec rackup
