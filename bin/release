@@ -8,6 +8,4 @@ cat <<EOF
 config_vars:
   PATH: /opt/rubies/current/bin:$PATH
 
-default_process_types:
-  web: bundle exec rackup -p $PORT -E $RACK_ENV
 EOF
