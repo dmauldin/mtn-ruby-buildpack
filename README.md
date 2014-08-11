@@ -1,4 +1,3 @@
-mtn-ruby-buildpack
-==================
+# mtn-ruby-buildpack
 
-Basic build pack for ruby apps
+This is the simplest buildpack we could make for the purpose of deploying a Rack based application.
