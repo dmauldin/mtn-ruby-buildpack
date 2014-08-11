@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
-# bin/release <build-dir>
-set -ex
+# bin/compile <build-dir> <cache-dir>
 
-# use the latest ruby (1.9) in stackato
-export PATH=/opt/rubies/current/bin:$PATH
+set -e
 
-cd $1
+cd "$1"
 
 echo "Installing gem dependencies"
-bundle install --local --without development:test --path vendor/cache 2>&1
+bundle install --verbose --local --without development:test --path vendor/cache 2>&1

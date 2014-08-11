@@ -1,8 +1,8 @@
 #!/bin/sh
 
-BUILD_DIR="$1"
+set -e
 
-cd "$BUILD_DIR"
+cd "$1"
 
 if [ -e Gemfile ]; then
     echo "Ruby"
